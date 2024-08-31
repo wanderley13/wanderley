@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portifolio</title>
+    <style>
+        
+        body {
+           margin: 0;
+           background-color: bisque;
+       }
+       .container {
+           display: grid;
+       }
+       header {
+           grid-column-start: 1;
+           grid-column-end: 12;
+           background-color: #25a35a;
+       }
+
+       .menu {
+           grid-column-start: 8;
+           grid-column-end: 16;
+           justify-content: center;
+           gap: 20px;
+       }
+       
+       ul {
+           list-style-type: none;
+           color: #e60606;
+       }
+
+       a:link {
+           text-decoration: none;
+           padding: 30px 150px;
+           border: solid #ec0b0b 5px;
+           background-color: #5f69a0;
+           
+       }
+
+       li {
+           float: left;
+       }
+       .principal {
+               grid-column-start: 1;
+               grid-column-end: 1;
+       }
+      
+   </style>
+</head>
+<body>
+    <!--no corpo do texto cloquei algumas classes para embelezar o site,classe 'container menu' para o menu,e a clase 'container' para o titulo q fica acima,repeti isso em todos os outros-->
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">sobre mim</a></li>
+            <li><a href="formacao.html">formação academica</a></li>
+            <li><a href="portifolio.html">portifólio</a></li>
+            <li><a href="contato.html">contato</a></li>
+        </ul>
+    <header class="container">
+            <h1 style="color: rgb(252, 252, 252); text-align: center;">PORTIFÓLIO</h1>
+            <br>
+        </header>
+    
+        <section class="principal">
+            
+         <h1>NO MEU PORTIFÓLIO MOSTRAREI DOIS CODIGOS DO TRABALHO (LOGICA DE PROGRAMAÇÃO E ALGORITMOS)</h1>
+         <p style="color: #e60606;">PRIMEIRO CODIGO:esse codigo calcula o juros do cartao de uma loja </p>
+        <br>
+        <p>print('bem vindo a loja do Wanderley Junio Andrade dos Santos') <br>
+            #input com o valor do pedido e quantidae de parcelas <br>
+            valor_do_pedido = int(input('qual o valor do pedido:')) <br>
+            quantidade_parcela = int(input('deseja parcelar de quantas vezes:')) <br>
+            <br>
+            #implementação de juros <br>
+            if quantidade_parcela < 4: <br>
+                juros = (0/100) <br>
+            elif quantidade_parcela >= 4 < 6: <br>
+                juros = (4/100) <br>
+            elif quantidade_parcela >= 6 < 9: <br>
+                juros = (8 / 100) <br>
+            elif quantidade_parcela >= 9 < 13: <br>
+                juros = (16 / 100) <br>
+            else: <br>
+                juros = (32/100) <br>
+            #implementação do valor da parcela e valor total de parcelas <br>
+            
+            
+            valor_da_parcela = valor_do_pedido * (1 + juros) / quantidade_parcela <br>
+            valor_total_parcelas = valor_da_parcela * quantidade_parcela <br>
+            
+            
+            print (valor_da_parcela) <br>
+            print (valor_total_parcelas) <br>
+        </p>
+        <br> <br>
+        <p style="color: #e60606;" >SEGUNDO CODIGO:esse calcula a marmita o valor e o tamanho da marmita selecionada</p>
+        <p>print('bem vindos a loja de marmitas do wanderley junio andrade dos santos') <br>
+            print('menu \n tamanho ',' bife acebolado ',' file de frango \n' <br>
+                                     'P' '          ' '16 reais' '          ' '15 reais' '\n' <br>
+                  'M' '          ' '18 reais' '          ' '17 reais' '\n' <br>
+                  'G' '          ' '22 reais' '          ' '21 reais' <br>
+                  ) <br>
+            #total de dinheiro q começamos <br>
+            total = 0 <br>
+            
+            #laço de repetição para o sabor <br>
+            while True: <br>
+                sabor =str( input ('SABOR (BA(bife acebolado)/FF(file de frango)):')) <br>
+                sabor = sabor.upper() <br>
+                if sabor != 'BA' and sabor != 'FF': <br>
+                    print('sabor invalido....tente novamente') <br>
+                    continue <br>
+            #laço de repetição para o tamanho <br>
+                tamanho = str( input('tamanho P,M,G')) <br>
+                tamanho = tamanho.upper() <br>
+                if tamanho != 'P' and tamanho !='M' and tamanho != 'G': <br>
+                  print('tamanho invalido... tente novamente') <br>
+                  continue <br>
+            #codigo para escolher o sabor e o tamanho <br>
+                if sabor == 'BA': <br>
+                 if tamanho == 'P': <br>
+                    print('voce pediu bife acebolado tamanho pequeno R$16') <br>
+                    <br>
+                    total += 16 <br>
+                    <br>
+                 elif tamanho == 'M': <br>
+                     print('voce pediu bife acebolado tamanho medio R$18') <br>
+                     <br>
+                     total += 18 <br>
+                     <br>
+                 else: <br>
+                      print('voce pediu bife acebolado tamanho grande R$22')<br>
+                      <br>
+                      total += 22 <br>
+                      <br>
+                if sabor == 'FF': <br>
+                 if tamanho == 'P': <br>
+                    print('voce pediu file de frango tamanho pequeno R$15') <br>
+                    total += 15 <br>
+                 elif tamanho == 'M': <br>
+                     print('voce pediu file de frango tamanho medio R$17') <br>
+                     total += 17 <br>
+                 else: <br>
+                       print('voce pediu file de frango tamanho grande R$21') <br>
+                       total +=21 <br>
+            #codigo para quebrar ou continuar á comprar mais <br>
+                opt = input('deseja continuar no pedido S/N').upper() <br>
+                if opt != 'S': <br>
+                  break <br>
+            print(f'valor total do pedido{total: 2f} ') <br>
+            </p>
+            <br><br>
+            <p style="font-size: 3rem; color: #e60606;" >TODOS OS CODIGOS SAO EM PHYTON</p>
+    
+    
+    
+    
+        </section>
+</body>
+</html>
